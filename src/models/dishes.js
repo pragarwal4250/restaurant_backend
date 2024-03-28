@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('../mongooseConnector');
 
 const dishSchema = new mongoose.Schema({
     
