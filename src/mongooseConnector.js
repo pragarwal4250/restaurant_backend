@@ -12,7 +12,8 @@ class dataBaseConnection{
             mongoose.connect(connectionString, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
-            });
+                dbName: 'restaurant',
+            })
 
             dataBaseConnection.instance = mongoose;
         }

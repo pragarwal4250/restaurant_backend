@@ -14,7 +14,8 @@ function loggerMiddleware(req, res, next) {
 }
 
 app.use(cors());
-app.use(loggerMiddleware)
+app.use(loggerMiddleware);
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(dishRoutes);
 

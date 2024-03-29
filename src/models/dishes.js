@@ -1,7 +1,7 @@
 const mongoose = require('../mongooseConnector');
 
 const dishSchema = new mongoose.Schema({
-    
+
     name: {
         type: String,
         required: true,
@@ -29,4 +29,4 @@ const dishSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('dishes', dishSchema);
+module.exports = mongoose.model('Dish', dishSchema);
