@@ -16,7 +16,7 @@ exports.postDishes = async (req, res) => {
 
     const savedDishes = await Promise.all(dishes.map(async dishData => {
       const { name, category, description, price, image } = dishData;
-      const parsedPrice = parseInt(price.replace(/\$/g, ''), 10); // Convert price string to integer
+      const parsedPrice = parseFloat(price.replace(/\$/g, '')); // Convert price string to double
       const newDish = new Dish({ name, category, description, price: parsedPrice, image });
       return await newDish.save();
     }));
