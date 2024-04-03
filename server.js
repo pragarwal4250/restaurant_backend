@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const dishRoutes = require('./src/routes/dishes')
+const profileRoutes = require('./src/routes/profiles')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,9 +19,8 @@ app.use(loggerMiddleware);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(dishRoutes);
+app.use(profileRoutes);
 
 app.listen(PORT, () => {
     console.log("Server is running...");
 });
-
-console.log('Exiting')
