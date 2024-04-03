@@ -1,4 +1,4 @@
-const Profile = require('../models/profile');
+const { Profile, Address } = require('../models/profiles');
 
 exports.getProfiles = async (req, res) => {
   await Profile.find()
